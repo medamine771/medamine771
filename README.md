@@ -1,23 +1,30 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=slice&color=0:0d1117,100:238636&height=180&section=header&text=amine%40dev%3A~%24&fontSize=44&fontColor=ffffff&animation=twinkling&fontAlignY=40&desc=Mohamed%20Amine%20BAICH%20%C2%B7%20D%C3%A9veloppeur%20Full-Stack&descSize=16&descAlignY=65" alt="Banniere terminal" width="100%"/>
-
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=20&duration=2800&pause=800&color=3FB950&center=true&vCenter=true&width=620&lines=%24+whoami;%24+cat+about.txt;%24+docker+compose+up+-d;%24+git+commit+-m+%22feat%3A+ship+it%22;%24+echo+%22Du+backend+au+frontend%22" alt="Typing SVG" />
-</a>
-
-<br/>
-
-<img src="https://komarev.com/ghpvc/?username=medamine771&label=Visites%20du%20profil&color=238636&style=flat-square" alt="Compteur de visites"/>
+<img src="assets/header.svg" alt="Terminal animé : whoami, Mohamed Amine BAICH, Développeur Full-Stack, ouvert aux opportunités" width="100%"/>
 
 </div>
 
+```text
+ █████╗ ███╗   ███╗██╗███╗   ██╗███████╗
+██╔══██╗████╗ ████║██║████╗  ██║██╔════╝
+███████║██╔████╔██║██║██╔██╗ ██║█████╗
+██╔══██║██║╚██╔╝██║██║██║╚██╗██║██╔══╝
+██║  ██║██║ ╚═╝ ██║██║██║ ╚████║███████╗
+╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
+        Du backend au frontend
+```
+
 ---
 
-```bash
-amine@dev:~$ whoami
-Mohamed Amine BAICH · Développeur Full-Stack · Ingénierie Logicielle
+## ⚙️ `systemctl start amine.service`
 
+<div align="center">
+
+<img src="assets/boot.svg" alt="Journal de démarrage animé : Java, microservices, Docker, FastAPI, React, puis prêt à collaborer" width="100%"/>
+
+</div>
+
+```bash
 amine@dev:~$ cat about.txt
 Je conçois et livre des applications web full-stack, de l'API à l'interface :
 services REST, microservices, interfaces React / TypeScript et déploiement
@@ -26,7 +33,7 @@ avec Docker. Je m'intéresse aussi à l'intégration d'IA (LLM, NLP).
 amine@dev:~$ neofetch
   ┌──────────────────────────────────────────────┐
   │  OS        : Linux / Windows                 │
-  │  Base      : TanTan, Maroc 🇲🇦                 │
+  │  Base      : Tantan, Maroc 🇲🇦                 │
   │  Formation : Ingénierie Logicielle · ENSIASD │
   │  Langues   : Arabe · Français · English      │
   │  Éditeur   : VS Code / IntelliJ              │
@@ -34,6 +41,16 @@ amine@dev:~$ neofetch
   │  Statut    : Ouvert aux opportunités         │
   └──────────────────────────────────────────────┘
 ```
+
+---
+
+## 📊 `htop`
+
+<div align="center">
+
+<img src="assets/skills-htop.svg" alt="Panneau façon htop : niveau de focus auto-évalué en Backend, Frontend, DevOps, IA et Data, et liste des technologies utilisées" width="100%"/>
+
+</div>
 
 ---
 
@@ -82,24 +99,46 @@ amine@dev:~$ neofetch
 
 ---
 
+## 🐳 `docker ps`
+
+```text
+CONTAINER      IMAGE                  STATUS         PORTS / ROLE
+a1f3c9d2e801   flowbill               Up 2026        microservices · gateway · PostgreSQL
+b7e20c44d9a3   smart-cv-analyzer      Up 2026        FastAPI → LLM → score
+c93d1a7f5b62   mobile-groupes         Up             Flutter · chat · Docker
+d04e8b21c7f9   opportunites           Up (healthy)   ouvert aux collaborations
+```
+
+---
+
 ## 🗂️ `cd ~/projets`
 
-<details>
+<details open>
 <summary><code>$ cd flowbill</code> · <b>Flowbill</b>, plateforme SaaS multi-tenant (B2B)</summary>
 <br/>
 
-```text
-Microservices : auth · tenants · projets · temps · facturation
-Gateway       : Spring Cloud API Gateway
-Sécurité      : JWT + rôles (Spring Security)
-Données       : PostgreSQL, un schéma par client, migrations Flyway
-Déploiement   : Docker Compose
-Frontend      : React / TypeScript / Tailwind CSS
+<div align="center">
+
+<img src="assets/flowbill-architecture.svg" alt="Architecture de Flowbill : React, Spring Cloud Gateway, microservices auth, tenants, projets, temps, facturation, puis PostgreSQL" width="100%"/>
+
+</div>
+
+```yaml
+# docker-compose.yml (aperçu)
+services:
+  gateway:    # Spring Cloud API Gateway · JWT + rôles (Spring Security)
+  auth:       # authentification
+  tenants:    # gestion des clients
+  projets:    # projets
+  temps:      # suivi du temps
+  facturation:# facturation
+  postgres:   # un schéma par client · migrations Flyway
+  frontend:   # React / TypeScript / Tailwind CSS
 ```
 
 `Java 17` `Spring Boot 3` `React` `TypeScript` `PostgreSQL` `Docker`
 
-👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT)
+👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT) <!-- TODO: remplacer NOM_DU_DEPOT -->
 
 </details>
 
@@ -107,17 +146,20 @@ Frontend      : React / TypeScript / Tailwind CSS
 <summary><code>$ cd smart-cv-analyzer</code> · <b>Smart CV Analyzer</b>, scoring automatique de CV</summary>
 <br/>
 
-```text
-Entrée   : un CV
-Pipeline : API FastAPI → LLM (extraction) → calcul du score
-Sortie   : compétences, expériences, formation + score
-Qualité  : API testée avec Pytest et Postman
-Frontend : React / Tailwind CSS
+```json
+{
+  "name": "smart-cv-analyzer",
+  "pipeline": ["API FastAPI", "LLM (extraction)", "calcul du score"],
+  "input": "un CV",
+  "output": ["compétences", "expériences", "formation", "score"],
+  "tests": ["Pytest", "Postman"],
+  "frontend": "React / Tailwind CSS"
+}
 ```
 
 `Python` `FastAPI` `LLM` `React` `Tailwind CSS`
 
-👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT)
+👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT) <!-- TODO: remplacer NOM_DU_DEPOT -->
 
 </details>
 
@@ -132,9 +174,19 @@ Backend   : containerisé avec Docker
 
 `Flutter` `Docker`
 
-👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT)
+👉 [Ouvrir le dépôt](https://github.com/medamine771/NOM_DU_DEPOT) <!-- TODO: remplacer NOM_DU_DEPOT -->
 
 </details>
+
+---
+
+## 🚀 `cat .github/workflows/ci.yml`
+
+<div align="center">
+
+<img src="assets/pipeline.svg" alt="Pipeline CI/CD illustré : lint, test, build, docker, deploy" width="100%"/>
+
+</div>
 
 ---
 
@@ -152,14 +204,77 @@ timeline
 
 ---
 
+## 🐍 `./snake.sh`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/medamine771/medamine771/output/github-snake-dark.svg"/>
+  <img alt="Serpent animé qui mange mes contributions GitHub" src="https://raw.githubusercontent.com/medamine771/medamine771/output/github-snake.svg" width="100%"/>
+</picture>
+
+</div>
+
+---
+
 ## 📊 `./stats.sh`
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=medamine771&show_icons=true&theme=github_dark&hide_border=true&count_private=true&title_color=3fb950&icon_color=3fb950" alt="Stats GitHub"/>
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=medamine771&show_icons=true&theme=github_dark&hide_border=true&count_private=true&title_color=3fb950&icon_color=3fb950" alt="Statistiques GitHub"/>
 <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=medamine771&layout=compact&theme=github_dark&hide_border=true&title_color=3fb950" alt="Langages principaux"/>
 
 </div>
+
+---
+
+## ⏰ `crontab -l`
+
+```cron
+# m h  dom mon dow   commande
+0  *  *   *   *     apprendre quelque chose de nouveau
+0  9  *   *   1-5   docker compose up -d && git pull
+30 18 *   *   1-5   git commit -m "feat: ship it"
+@reboot              echo "Du backend au frontend"
+```
+
+---
+
+## 📖 `man amine`
+
+<details>
+<summary><code>$ man amine</code> · ouvrir la page de manuel</summary>
+
+```text
+AMINE(1)                  Manuel du développeur                  AMINE(1)
+
+NOM
+       amine - développeur full-stack, du backend au frontend
+
+SYNOPSIS
+       amine [--backend] [--frontend] [--docker] [--ia]
+
+DESCRIPTION
+       Conçoit et livre des applications web full-stack : API REST,
+       microservices, interfaces React / TypeScript, déploiement Docker.
+       S'intéresse à l'intégration d'IA (LLM, NLP).
+
+OPTIONS
+       --backend    Spring Boot, FastAPI, Laravel
+       --frontend   React, TypeScript, Tailwind CSS, Flutter
+       --docker     Docker, Docker Compose, CI/CD
+       --ia         LLM, NLP, OpenCV, Power BI
+
+VOIR AUSSI
+       flowbill(1), smart-cv-analyzer(1), mobile-groupes(1)
+
+AUTEUR
+       Mohamed Amine BAICH · Tantan, Maroc
+
+                               2026                              AMINE(1)
+```
+
+</details>
 
 ---
 
@@ -170,11 +285,27 @@ amine@dev:~$ ./contact.sh
 > Ouvert aux opportunités professionnelles et aux collaborations.
 ```
 
+<details>
+<summary><code>$ sudo hire amine</code></summary>
+
+```bash
+[sudo] mot de passe pour recruteur : ********
+Vérification des compétences ......... [  OK  ]
+Vérification de la motivation ........ [  OK  ]
+Envoi de la proposition .............. [  OK  ]
+
+✔ Excellente décision. Contactez-moi via LinkedIn ou par email ci-dessous.
+```
+
+</details>
+
 <div align="center">
 
-<a href="https://www.linkedin.com/in/mohamed-amine-baich-7bab5b258"><img src="https://img.shields.io/badge/LinkedIn-mohamed--amine--baich-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
-<a href="mailto:mohamedaminebaichh@gmail.com"><img src="https://img.shields.io/badge/Gmail-mohamedaminebaichh@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://www.linkedin.com/in/mohamed-amine-baich-7bab5b258"><img src="https://img.shields.io/badge/LinkedIn-mohamed--amine--baich-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Profil LinkedIn"/></a>
+<a href="mailto:mohamedaminebaichh@gmail.com"><img src="https://img.shields.io/badge/Gmail-mohamedaminebaichh@gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Envoyer un email"/></a>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:238636,100:0d1117&height=100&section=footer" alt="Footer" width="100%"/>
+<br/><br/>
+
+<img src="https://komarev.com/ghpvc/?username=medamine771&label=Visites%20du%20profil&color=238636&style=flat-square" alt="Compteur de visites"/>
 
 </div>
